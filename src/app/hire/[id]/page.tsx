@@ -56,7 +56,7 @@ function OperacionesSummary({ fields }: { fields: Record<string, unknown> }) {
         label="Requiere seguimiento"
         value={fields.requiere_seguimiento === 'si' ? 'Sí' : 'No'}
       />
-      {fields.requiere_seguimiento === 'si' && fields.motivo_seguimiento && (
+      {fields.requiere_seguimiento === 'si' && Boolean(fields.motivo_seguimiento) && (
         <FieldValue label="Motivo" value={String(fields.motivo_seguimiento)} />
       )}
     </div>
